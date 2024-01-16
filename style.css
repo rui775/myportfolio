@@ -1,0 +1,107 @@
+/*  font-family: 'Lemon',serif;
+    font-family: 'Prompt', sans-serif; */
+
+* {
+    border: dashed 1px black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+header {
+    width: 15rem;
+    height: fullscreen;
+    background-color: rgba(85, 85, 85, 0.644);
+}
+
+
+.imgBox img {
+    width: 10rem;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #555;
+}
+
+.sidenav {
+    height: 100%;
+    width: 14rem;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 5rem;
+}
+
+.sidenav a {
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #818181;
+    display: block;
+}
+
+.list {
+    padding-top: 16px;
+}
+
+.list a {
+    font-family: 'Prompt', sans-serif;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.whoami,
+.projects,
+.skills,
+.contacts {
+    font-family: 'Prompt', sans-serif;
+    height: 30rem;
+    margin-left: 14rem;
+    padding: 2rem 4rem;
+    border-bottom: #818181 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.whoami h1 {
+    font-family: 'Lemon', serif;
+    font-size: 4rem;
+}
+
+.whoami .firstname {
+    color: black;
+}
+
+.whoami .lastname {
+    color: #818181;
+    margin-left: 0.25rem;
+}
+
+.whoami .firstname:hover {
+    color: #818181;
+}
+
+.whoami .lastname:hover {
+    color: black;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
