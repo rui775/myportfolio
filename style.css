@@ -1,9 +1,7 @@
-/*  font-family: 'Lemon',serif;
-    font-family: 'Prompt', sans-serif; */
+/* font-family: 'Lemon', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Prompt', sans-serif; */
 
-* {
-    border: dashed 1px black;
-}
 
 body {
     margin: 0;
@@ -12,12 +10,32 @@ body {
     height: auto;
 }
 
+
 header {
     width: 15rem;
     height: fullscreen;
     background-color: rgba(85, 85, 85, 0.644);
 }
 
+.button {
+    border: solid #04AA6D 1px;
+    color: #04AA6D;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: bolder;
+    margin: 0.25rem 0.125rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.button:hover {
+    border: solid #ffffff 1px;
+    background-color: #575757;
+    color: #ffffff;
+    transition-duration: 0.4s;
+}
 
 .imgBox img {
     width: 10rem;
@@ -48,11 +66,13 @@ header {
 }
 
 .list {
-    padding-top: 16px;
+    padding-top: 2rem;
 }
 
 .list a {
-    font-family: 'Prompt', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding-bottom: 3rem;
 }
 
 .sidenav a:hover {
@@ -63,8 +83,10 @@ header {
 .projects,
 .skills,
 .contacts {
-    font-family: 'Prompt', sans-serif;
-    height: 30rem;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    text-align: justify;
+    height: auto;
     margin-left: 14rem;
     padding: 2rem 4rem;
     border-bottom: #818181 1px solid;
@@ -75,8 +97,11 @@ header {
 }
 
 .whoami h1 {
+    display: flex;
+    flex-wrap: wrap;
     font-family: 'Lemon', serif;
     font-size: 4rem;
+    margin: 1rem 0;
 }
 
 .whoami .firstname {
@@ -84,8 +109,8 @@ header {
 }
 
 .whoami .lastname {
-    color: #818181;
-    margin-left: 0.25rem;
+    color: black;
+    margin-left: 1rem;
 }
 
 .whoami .firstname:hover {
@@ -93,15 +118,112 @@ header {
 }
 
 .whoami .lastname:hover {
-    color: black;
+    color: #818181;
+}
+
+/* apply to all h3 tags */
+.projects h2,
+.skills h2,
+.contacts h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.whoami h3,
+.projects h3,
+.skills h3,
+.contacts h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.projects h5,
+.skills h5,
+.contacts h5 {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.25rem 0;
+    margin-top: 1rem;
+}
+
+.projects p,
+.skills p,
+.contacts p {
+    margin: 0;
+}
+
+.skillsList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skillsList a {
+    padding: 0 0.5rem;
+}
+
+.contactsList {
+    display: flex;
+    align-items: center;
+}
+
+.contactsList a {
+    padding: 0 1rem;
+}
+
+.logo:hover {
+    filter: opacity(50%);
+    -webkit-filter: opacity(50%);
+    transition: 0.3s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .whoami h1 span {
+    color: #fff;
+}
+
+body.dark-mode .contacts div a img:hover {
+    filter: invert(50%);
+    -webkit-filter: invert(50%);
+    transition: 0.3s;
 }
 
 @media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
+
+    header {
+        width: 8rem;
     }
 
-    .sidenav a {
-        font-size: 18px;
+    .content {
+        width: 100%;
+    }
+
+    .button {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.5rem;
+        font-weight: 400;
+        margin: 0.125rem 0.0625rem;
+    }
+
+    .imgBox img {
+        width: 6rem;
+    }
+
+    .sidenav {
+        width: 8rem;
+        padding-top: 3rem;
+    }
+
+    .whoami,
+    .projects,
+    .skills,
+    .contacts {
+        width: 100%;
+        padding: 2rem 0;
+        margin-left: 8rem;
     }
 }
